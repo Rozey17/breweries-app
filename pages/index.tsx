@@ -1,5 +1,8 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { Brewery } from '../components/brewery';
+import { Layout } from '../components/layout';
+import Map from '../components/map';
 
 export default function IndexPage() {
   const [responseData, setResponseData] = useState([]);
@@ -14,15 +17,23 @@ export default function IndexPage() {
     });
 
   return (
-    <div>
-      {responseData.length >= 1 &&
-        responseData.map((brewery, idx) => {
-          return (
-            <p key={idx}>
-              {brewery.name} - {brewery.city}, {brewery.state}
-            </p>
-          );
-        })}
-    </div>
+    <Layout>
+      <div className='w-1/2 p-4'>
+        {responseData.length >= 1 &&
+          responseData.map((brewery, idx) => {
+            return (
+              <Brewery
+                name={brewery.name}
+                city={brewery.city}
+                state={brewery.state}
+                street={brewery.street}
+              />
+            );
+          })}
+      </div>
+      <div className='w-1/2 p-4'>
+        <Map />
+      </div>
+    </Layout>
   );
 }
