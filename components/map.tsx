@@ -7,7 +7,7 @@ export {};
 interface IProps {}
 
 export default function Map({}: IProps) {
-  const mapRef = useRef<ReactMapGL | null>(null);
+  // const mapRef = useRef< ReactMapGL | null>(null);
   const [viewport, setViewport] = useState<ViewState>({
     latitude: 43,
     longitude: -79,
@@ -22,7 +22,7 @@ export default function Map({}: IProps) {
         height='calc(100vh - 64px)'
         mapboxApiAccessToken='pk.eyJ1Ijoicm96ZXluaW9yMSIsImEiOiJja25mdTF0YWIxYmJwMnBvN3Bnejc4b2tlIn0.YFKGrkUmrG2KjHBSv3Z4Rw'
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
-        ref={(instance) => (mapRef.current = instance)}
+        // ref={(instance) => (mapRef.current = instance)}
         minZoom={5}
         maxZoom={15}
         mapStyle='mapbox://styles/leighhalliday/ckhjaksxg0x2v19s1ovps41ef'
