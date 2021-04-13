@@ -18,21 +18,23 @@ export default function IndexPage() {
 
   return (
     <Layout>
-      <div className='w-1/2 p-4'>
-        {responseData.length >= 1 &&
-          responseData.map((brewery, idx) => {
-            return (
-              <Brewery
-                name={brewery.name}
-                city={brewery.city}
-                state={brewery.state}
-                street={brewery.street}
-              />
-            );
-          })}
-      </div>
-      <div className='w-1/2 p-4'>
-        <Map />
+      <div className='flex'>
+        <div className='w-1/2 p-4'>
+          {responseData.length >= 1 &&
+            responseData.map((brewery, idx) => {
+              return (
+                <Brewery
+                  name={brewery.name}
+                  city={brewery.city}
+                  state={brewery.state}
+                  street={brewery.street}
+                />
+              );
+            })}
+        </div>
+        <div className='w-1/2 p-4'>
+          <Map />
+        </div>
       </div>
     </Layout>
   );

@@ -14,7 +14,9 @@ export const Layout = ({ children }) => {
 
         <ul className='flex items-center'>
           <li>
-            <h1 className='pl-8 lg:pl-0 text-gray-700'>Svelte</h1>
+            <h1 className='pl-8 lg:pl-0 text-2xl-gray-700 uppercase font-bold'>
+              Breweries
+            </h1>
           </li>
         </ul>
 

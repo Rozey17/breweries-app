@@ -20,7 +20,7 @@ export default function Map({}: IProps) {
         {...viewport}
         width='100%'
         height='calc(100vh - 64px)'
-        mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_API_TOKEN}
+        mapboxApiAccessToken='pk.eyJ1Ijoicm96ZXluaW9yMSIsImEiOiJja25mdTF0YWIxYmJwMnBvN3Bnejc4b2tlIn0.YFKGrkUmrG2KjHBSv3Z4Rw'
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
         ref={(instance) => (mapRef.current = instance)}
         minZoom={5}
